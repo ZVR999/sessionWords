@@ -9,17 +9,52 @@ body{
 
 div{
     display: inline-block;
-    width: 40%;
+    width: 300px;
     vertical-align: top;
 }
 
 .rightbox{
     border-left: 3px solid black;
     min-height: 500px;
+    padding: 25px;
 }
 
 .right{
     position: absolute;
     right: 50px;
     top: 50px;
+}
+
+.box{
+    min-width: 100px;
+}
+
+span{
+    color: black;
+}
+
+.reg{
+    font-size: 16px;
+}
+
+.big{
+    font-size: 32px;
+}
+
+.red{
+    color: red;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.green{
+    color: green;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.blue{
+    display: block;
+    color: blue;
+    margin-bottom: 15px;
 }

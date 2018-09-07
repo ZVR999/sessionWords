@@ -14,13 +14,14 @@
     <div>
         <h1>Add a new word</h1>
         <br>
-        <h4>Choose color</h4>
+        
         <form action="/process" method="POST">
             {% csrf_token %}
             <input type="text" name="new_word"><br> <br>
+            <h4>Choose color</h4> <br>
             <input type="radio" name="color" value="red">Red <br>
-            <input type="radio" name="color" value="red">Green <br>
-            <input type="radio" name="color" value="red">Blue <br><br>
+            <input type="radio" name="color" value="green">Green <br>
+            <input type="radio" name="color" value="blue">Blue <br><br>
             <input type="checkbox" name="big_font" value="yes">show in BIG fonts! <br><br>
             <input type="submit" value="Add to Session">
         </form>
@@ -31,7 +32,9 @@
             <input class="right" type="submit" value="Clear Session">
         </form>
         <br><br>
-        <div>Placeholder</div>
+        {% for log in request.session.log %}
+            {{log|safe}}
+        {% endfor %}
     </div>
 </body>
 
