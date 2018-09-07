@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Session Words</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'session_words/css/style.css' %}">
+</head>
+
+<body>
+    <div>
+        <h1>Add a new word</h1>
+        <br>
+        <h4>Choose color</h4>
+        <form action="/process" method="POST">
+            {% csrf_token %}
+            <input type="text" name="new_word"><br> <br>
+            <input type="radio" name="color" value="red">Red <br>
+            <input type="radio" name="color" value="red">Green <br>
+            <input type="radio" name="color" value="red">Blue <br><br>
+            <input type="checkbox" name="big_font" value="yes">show in BIG fonts! <br><br>
+            <input type="submit" value="Add to Session">
+        </form>
+    </div>
+    <div class="rightbox">
+        <form action="/clear">
+            {% csrf_token %}
+            <input class="right" type="submit" value="Clear Session">
+        </form>
+        <br><br>
+        <div>Placeholder</div>
+    </div>
+</body>
+
+</html>

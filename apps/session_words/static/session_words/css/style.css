@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 25px;
+}
+
+div{
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+.rightbox{
+    border-left: 3px solid black;
+    min-height: 500px;
+}
+
+.right{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
